@@ -26,7 +26,7 @@ import sys
 
 if not os.geteuid() == 0:
     sys.exit(
-        """\033[1;91m\n[!] Xerosploit installer must be run as root. ¯\_(ツ)_/¯\n\033[1;m""")
+        """\033[1;91m\n[!] El instalador de Xerosploit debe ejecutarse como root. ¯\_(ツ)_/¯\n\033[1;m""")
 
 print(""" \033[1;36m
 ┌══════════════════════════════════════════════════════════════┐
@@ -38,7 +38,7 @@ print(""" \033[1;36m
 
 def main():
 
-    print("\033[1;34m\n[++] Please choose your operating system.\033[1;m")
+    print("\033[1;34m\n[++] Elija su sistema operativo.\033[1;m")
 
     print("""
 1) Ubuntu / Kali linux / Others
@@ -46,18 +46,18 @@ def main():
 """)
     system0 = input(">>> ")
     if system0 == "1":
-        print("\033[1;34m\n[++] Installing Xerosploit ... \033[1;m")
+        print("\033[1;34m\n[++] Instalación de Xerosploit ... \033[1;m")
         install = os.system(
             "apt-get update && apt install python3-pip && apt-get install -y nmap hping3 build-essential python3-pip ruby-dev git libpcap-dev libgmp3-dev && pip3 install tabulate terminaltables")
 
         install1 = os.system("""cd tools/bettercap/ && gem build bettercap.* && sudo gem install xettercap-* && rm xettercap-* && cd ../../ && mkdir -p /opt/xerosploit && cp -R tools/ /opt/xerosploit/ && cp xerosploit.py /opt/xerosploit/xerosploit.py && cp banner.py /opt/xerosploit/banner.py && cp run.sh /usr/bin/xerosploit && chmod +x /usr/bin/xerosploit && tput setaf 34; echo "Xerosploit has been sucessfully installed. Execute 'xerosploit' in your terminal." """)
     elif system0 == "2":
-        print("\033[1;34m\n[++] Installing Xerosploit ... \033[1;m")
+        print("\033[1;34m\n[++] Instalación de Xerosploit ... \033[1;m")
 
         
-        bet_un = os.system("apt-get remove bettercap")# Remove bettercap to avoid some problems . Installed by default with apt-get .
+        bet_un = os.system("apt-get remove bettercap")# Retire bettercap para evitar algunos problemas. Instalado por defecto con apt-get .
         
-        bet_re_ins = os.system("gem install bettercap")# Reinstall bettercap with gem.
+        bet_re_ins = os.system("gem install bettercap")# Reinstale bettercap con gema.
 
         install = os.system(
             "apt-get update && apt install python3-pip && apt-get install -y nmap hping3 ruby-dev git libpcap-dev libgmp3-dev python3-tabulate python3-terminaltables")
@@ -65,7 +65,7 @@ def main():
         install1 = os.system("""cd tools/bettercap/ && gem build bettercap.* && sudo gem install xettercap-* && rm xettercap-* && cd ../../ && mkdir -p /opt/xerosploit && cp -R tools/ /opt/xerosploit/ && cp xerosploit.py /opt/xerosploit/xerosploit.py && cp banner.py /opt/xerosploit/banner.py && cp run.sh /usr/bin/xerosploit && chmod +x /usr/bin/xerosploit && tput setaf 34; echo "Xerosploit has been sucessfully installed. Execute 'xerosploit' in your terminal." """)
 
     else:
-        print("Please select the option 1 or 2")
+        print("Seleccione la opción 1 o 2")
         main()
 
 
