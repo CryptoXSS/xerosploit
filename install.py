@@ -26,7 +26,7 @@ import sys
 
 if not os.geteuid() == 0:
     sys.exit(
-	    """\033[1;91m\n[!]El instalador de Xerosploit debe ejecutarse como root. ¯\_(ツ)_/¯\n\033[1;m""")
+        """\033[1;91m\n[!] Xerosploit installer must be run as root. ¯\_(ツ)_/¯\n\033[1;m""")
 
 print(""" \033[1;36m
 ┌══════════════════════════════════════════════════════════════┐
@@ -38,10 +38,10 @@ print(""" \033[1;36m
 
 def main():
 
-   print("\033[1;34m\n[++] Elija su sistema operativo.\033[1;m")
+    print("\033[1;34m\n[++] Please choose your operating system.\033[1;m")
 
-   print("""
-1) Ubuntu / Kali linux / Otros
+    print("""
+1) Ubuntu / Kali linux / Others
 2) Parrot OS
 """)
     system0 = input(">>> ")
