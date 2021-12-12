@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 import os
 import sys
@@ -25,7 +25,8 @@ import sys
 #---------------------------------------------------------------------------#
 
 if not os.geteuid() == 0:
-    sys.exit("""\033[1;91m\n[!] Xerosploit installer must be run as root. ¯\_(ツ)_/¯\n\033[1;m""")
+    sys.exit(
+	    """\033[1;91m\n[!] Xerosploit installer must be run as root. ¯\_(ツ)_/¯\n\033[1;m""")
 
 print(""" \033[1;36m
 ┌══════════════════════════════════════════════════════════════┐
