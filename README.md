@@ -30,11 +30,13 @@ Instalation
 =
 Dependencies will be automatically installed.
 
-    git clone https://github.com/LionSec/xerosploit
+    git clone https://github.com/CryptoXSS/xerosploit
     cd xerosploit && sudo python install.py
     sudo xerosploit
-
-
+    sudo apt-get install 2to3
+    sudo pip install 2to3
+    sudo 2to3 -w xerosploit.py
+    python3 xerosploit.py
 Tested on
 =
 
